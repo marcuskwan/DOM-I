@@ -58,10 +58,67 @@ let nav = document.querySelector("nav");
 let navLinks = document.querySelectorAll("a");
 let ctaSection = document.querySelector(".class");
 let ctaText = document.querySelector(".cta-text");
+let ctaHeading = document.querySelector(".cta-text h1");
+let h4 = document.querySelectorAll("h4");
+// let ctaBreaks = document.querySelectorAll(".cta-text h1 br")
+let button = document.querySelector(".cta .cta-text button");
 let mainContent = document.querySelector(".main-content");
 let topContent = document.querySelector(".top-content");
-let textContent = document.querySelectorAll(".text-content");
+let textContent = document.querySelectorAll(".text-content p");
 let bottomContent = document.querySelector(".bottom-content");
 let contact = document.querySelector(".contact"); 
 let footer = document.querySelector("footer");
+
+// update navLinks 
+navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
+navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
+navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
+navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
+navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// setting cta text h1 
+ctaHeading.textContent = siteContent["cta"]["h1"];
+// // appending <br> tags (get back to this)
+// ctaHeading.ap(ctaBreaks[0]);
+
+// creating and appending two elements to nav
+const newNavElement1 = document.createElement('a');
+nav.appendChild(newNavElement1);
+newNavElement1.textContent = "Media";
+const newNavElement2 = document.createElement('a');
+nav.appendChild(newNavElement2);
+newNavElement2.textContent = "Story";
+
+// setting navLinks to green
+navLinks.forEach(text=> text.style.color = "green");
+
+// updating button 
+button.textContent = siteContent["cta"]["button"];
+
+// assigning text to text-content 
+textContent[0].textContent = siteContent["main-content"]["features-content"];
+textContent[1].textContent = siteContent["main-content"]["about-content"];
+textContent[2].textContent = siteContent["main-content"]["services-content"];
+textContent[3].textContent = siteContent["main-content"]["product-content"];
+textContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+// assigning text to headings 
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+// textContent[1].classList.add("")
+
+// // create variables contact paragraphs, assign them to text 
+let contactParas = document.querySelectorAll(".contact p");
+contactParas[0].textContent = siteContent["contact"]["address"];
+contactParas[1].textContent = siteContent["contact"]["phone"];
+contactParas[2].textContent = siteContent["contact"]["email"];
+
+// // create variable for footer paragraph, update text 
+let footerPara = document.querySelector("footer p")
+footerPara.textContent = siteContent["footer"]["copyright"];
 
