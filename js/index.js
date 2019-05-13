@@ -41,16 +41,16 @@ const siteContent = {
 // let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// creating selectors for images, setting their sources
+// creating selectors for images, setting their sources, href, alt
 let logoImg = document.getElementById("logo-img");
 logoImg.setAttribute("src",siteContent["nav"]["img-src"])
-
+logoImg.setAttribute("alt","Great Idea!")
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src",siteContent["cta"]["img-src"])
-
+ctaImg.setAttribute("alt","Image of a code snippet.")
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute("src",siteContent["main-content"]["middle-img-src"])
-
+middleImg.setAttribute("alt","Image of code snippets across the screen")
 // Create selectors to point your data into elements
 let container = document.querySelector(".container");
 let header = document.querySelector("header");
