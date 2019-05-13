@@ -38,5 +38,30 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// creating selectors for images, setting their sources
+let logoImg = document.getElementById("logo-img");
+logoImg.setAttribute("src",siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src",siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src",siteContent["main-content"]["middle-img-src"])
+
+// Create selectors to point your data into elements
+let container = document.querySelector(".container");
+let header = document.querySelector("header");
+let nav = document.querySelector("nav");
+let navLinks = document.querySelectorAll("a");
+let ctaSection = document.querySelector(".class");
+let ctaText = document.querySelector(".cta-text");
+let mainContent = document.querySelector(".main-content");
+let topContent = document.querySelector(".top-content");
+let textContent = document.querySelectorAll(".text-content");
+let bottomContent = document.querySelector(".bottom-content");
+let contact = document.querySelector(".contact"); 
+let footer = document.querySelector("footer");
+
